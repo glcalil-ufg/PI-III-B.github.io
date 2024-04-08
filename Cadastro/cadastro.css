@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+
+body{
+    background-color: #0A0A0A;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+
+.container form{
+    background-color: #45413E;
+    padding: 10%;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    gap: 5%;
+    border-radius: 20px
+}
+
+.container form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.container div #submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#submit{
+    background-color: #692FEB;
+    width: 80%;
+    
+}
+

@@ -4,30 +4,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Criar conta</title>
+        <link rel="stylesheet" href="cadastro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <form action>
-                <label for="name">Nome Completo</label>
-                <input type="text" name="name" id="name">
+                <h1>Cadastre-se</h1>
+                <div>
+                    <label for="name">Nome Completo</label>
+                    <input type="text" name="name" id="name">
+                </div>
 
-                <label for="name">Email</label>
-                <input type="email" name="email" id="email">
+                <div>
+                    <label for="name">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
 
-                <label for="name">Data de Nascimento</label>
-                <input type="date" name="date" id="date">
+                <div>
+                    <label for="name">Data de Nascimento</label>
+                    <input type="date" name="date" id="date">
+                </div>
 
-                <label for="office">Cargo</label>
-                <select name="office" id="office">
-                    <option value="disable">Selecione um cargo</option>
-                    <option value>Desenvolvedor Frontend</option>
-                    <option value>Desenvolvedor Backend</option>
-                    <option value>Desenvolvedor Mobile</option>
-                    <option value>Desenvolvedor Fullstack</option>
-                </select>
+                <div>
+                    <label for="office">Cargo</label>
+                    <select name="office" id="office">
+                        <option value="disable">Selecione um cargo</option>
+                        <option value>Desenvolvedor Frontend</option>
+                        <option value>Desenvolvedor Backend</option>
+                        <option value>Desenvolvedor Mobile</option>
+                        <option value>Desenvolvedor Fullstack</option>
+                    </select>
+                </div>
 
-                <button type="submit"></button>
-                <a href="../">Já tem cadastro?</a>
+                <div>
+                    <button type="submit" id="submit">Cadastrar</button>
+                    <a href="../">Já tem cadastro?</a>
+                </div>
             </form>
         </div>
     </body>

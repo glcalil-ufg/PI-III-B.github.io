@@ -34,6 +34,22 @@ body{
     flex-direction: column;
 }
 
+
+
+.container label{
+    padding-left: 2%;
+}
+
+.container input, select, option{
+    color: black;
+    padding-left: 2%;
+    margin-top: 2%;
+    border: none;
+    border-radius: 20px;
+    height: 2rem;
+    
+}
+
 .container div #submit{
     display: flex;
     align-items: center;
@@ -42,8 +58,10 @@ body{
 
 
 #submit{
+    border-radius: 20px;
     background-color: #692FEB;
-    width: 80%;
+    height: 2rem;
+  
     
 }
 

@@ -10,28 +10,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    
 </head>
 <body>
     <div class="container">
-        <form action>
+        <form id="login-form">
             <div class="title">
                 <h1>Entrar</h1>
             </div>
 
             <div>
                 <label for="name">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha" required>
             </div>
 
             <div>
-                <button type="submit" id="submit">Entrar</button>
+                <button id="submit" >Entrar</button>
                 <a href="../Cadastro/cadastro.html">Primeiro acesso?</a>
             </div>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="/src/usuario.js"></script>
+    <script src="./controllerLogin.js"></script>
+    <script>
+        //verifica se o documento foi completamente carregado e inicia o scrip do inicio
+        document.addEventListener("DOMContentLoaded", function() {
+            Login.start();
+        });
+    </script>
 </body>
 </html>

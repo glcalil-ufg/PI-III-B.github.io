@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taskanban</title>
-    <link rel="stylesheet" href="board.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Taskanban</title>
+        <link rel="stylesheet" href="board.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
-            <link
+            rel="stylesheet" />
+        <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
             crossorigin="anonymous" />
-        <script src="https://kit.fontawesome.com/bdbe516e40.js"
+        <script
+            src="https://kit.fontawesome.com/bdbe516e40.js"
             crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <i class="fa-solid fa-list-check"></i>
-                <h6>Taskanban</h6>
-            </div>
-            <div class="search">
-                <i class="fa-regular fa-bell"></i>
-                <input type="text" name="search" id="search"><i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="new-list">
-                <button type="button">Adicionar Tarefa  +</button>
-            </div>
-        </header>
-        <main>
-            <section class="board">
-                <div class="column">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h4>Taskanban</h4>
+                </div>
 
+                <div class="search">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="input-wrapper">
+                        <input type="text" name="search" id="search" /><i
+                            class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
-                <div class="column">
-                    
+
+                <div class="new-list">
+                    <button type="button">
+                        Adicionar Tarefa <i class="fa-solid fa-plus"></i>
+                    </button>
                 </div>
-                <div class="column">
-                    
+            </header>
+
+            <aside>
+                <div class="top">
+                    <div class="list">
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                    <div class="add-list">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
                 </div>
-                <div class="column">
-                    
+
+                <div class="bottom">
+                    <div class="user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
                 </div>
-            </section>
-        </main>
-    </div>
-</body>
+            </aside>
+
+            <main>
+                <section class="board">
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                </section>
+            </main>
+        </div>
+    </body>
 </html>

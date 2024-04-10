@@ -13,44 +13,44 @@
     </head>
     <body>
         <div class="container">
-            <form action>
+            <form id="sign-up" action>
                 <div class="title">
                     <h1>Cadastre-se</h1>
                 </div>
                 
                 <div>
                     <label for="name">Nome Completo</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                 </div>
 
                 <div>
                     <label for="name">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
 
                 <div>
                     <label for="name">Data de Nascimento</label>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" required>
                 </div>
 
                 <div>
                     <label for="senha">Criar senha</label>
-                    <input type="password" name="senha" id="senha">
+                    <input type="password" name="senha" id="senha" required>
                 </div>
 
                 <div>
                     <label for="confirme">Confirmar senha</label>
-                    <input type="password" name="confirme" id="confirme">
+                    <input type="password" name="confirme" id="confirme" required>
                 </div>
 
                 <div>
                     <label for="office">Cargo</label>
-                    <select name="office" id="office">
-                        <option value="disable">Selecione um cargo</option>
-                        <option value>Desenvolvedor Frontend</option>
-                        <option value>Desenvolvedor Backend</option>
-                        <option value>Desenvolvedor Mobile</option>
-                        <option value>Desenvolvedor Fullstack</option>
+                    <select name="office" id="office" required>
+                        <option value="" >Selecione um cargo</option>
+                        <option value="1">Desenvolvedor Frontend</option>
+                        <option value="2">Desenvolvedor Backend</option>
+                        <option value="3">Desenvolvedor Mobile</option>
+                        <option value="4">Desenvolvedor Fullstack</option>
                     </select>
                 </div>
 
@@ -60,5 +60,13 @@
                 </div>
             </form>
         </div>
+
+        <script src="./cadastro.js"></script>
+        <script>
+            //verifica se o documento foi completamente carregado e inicia o scrip do inicio
+            document.addEventListener("DOMContentLoaded", function() {
+                Cadastro.start();
+            });
+        </script>
     </body>
 </html>

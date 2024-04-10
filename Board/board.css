@@ -4,4 +4,19 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     color: #fff;
+    background-color: #0A0A0A;
+}
+
+.container header{
+    padding: 10px;
+    height: 5vh;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container header div{
+    height: 3vh;
+    display: flex;
+    gap: 2%;
 }

@@ -13,15 +13,14 @@
     "header header header"
     "aside main main";
     grid-gap: 1rem;
-    grid-template-columns: 3%  auto;
-    grid-template-rows: auto 90%;
-    
+    grid-template-columns: 5vw auto auto;
+    grid-template-rows: auto auto;
 }
 
 .container header{
-    width: 100 %; 
+    width: 100%; 
     grid-area: header;
-    border: 3px solid red;
+    border-bottom: 1px solid #0A0A0A;
     padding: 10px;
     height: 5vh;
     display: flex;
@@ -96,15 +95,44 @@ div.input-wrapper input:focus-visible{
 
 
 .container aside{
+    border-right: 1px solid #0A0A0A;
     grid-area: aside;
-    border: 3px solid red;
     margin-right: 2%;
-    width: 20vw;
-    height: 95vh
+    width: 5vh;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.container aside div.top{
+    height: 10%;
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container aside div.bottom{
+    height: 10%;
+    padding: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container aside i{
+    cursor: pointer;
+}
+
+
+
 .container main {
     grid-area: main;
-    border: 3px solid red;
+    border: 3px solid white;
     width: 40vw;
-    height: 95vh
+    height: 90vh;
 }
+

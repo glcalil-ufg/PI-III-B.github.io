@@ -1,10 +1,19 @@
+:root {
+    --font-family: "Roboto", sans-serif;
+    --background-color: #45413E;
+    --text-color: #fff;
+    --border-color: #0A0A0A;
+    --input-background-color: #0A0A0A;
+    --button-background-color: #9127EF;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-    background-color: #45413E;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .container{
@@ -20,7 +29,7 @@
 .container header{
     width: 100%; 
     grid-area: header;
-    border-bottom: 1px solid #0A0A0A;
+    border-bottom: 1px solid var(--input-background-color);
     padding: 10px;
     height: 5vh;
     display: flex;
@@ -50,7 +59,7 @@
 
 .container header div.search input{
     border: none;
-    background-color: #0A0A0A;
+    background-color: var(--input-background-color);
     height: 3vh;
     width: 20vw;
     color: red;
@@ -59,14 +68,14 @@
 .container header div.search div.input-wrapper{
     display: flex;
     align-items: center;
-    background-color: #0A0A0A;
+    background-color: var(--input-background-color);
     padding: 10px;
     border-radius: 10px;
 }
 
 
 .container header div.search div.input-wrapper i{
-    background-color: #0A0A0A;
+    background-color: var(--input-background-color);
     cursor: pointer;
 
 }
@@ -83,7 +92,7 @@ div.input-wrapper input:focus-visible{
 
 .container header div.new-list button{
     border: none;
-    background-color: #9127EF;
+    background-color: var(--button-background-color);
     width: 7vw;
     padding: 0.5em;
     border-radius: 10px;
@@ -95,7 +104,7 @@ div.input-wrapper input:focus-visible{
 
 
 .container aside{
-    border-right: 1px solid #0A0A0A;
+    border-right: 1px solid var(--input-background-color);
     grid-area: aside;
     margin-right: 2%;
     width: 5vh;
@@ -148,14 +157,14 @@ div.input-wrapper input:focus-visible{
     height: auto;
     border-radius: 10px;
     padding: 1%;
-    background-color: #0A0A0A;
+    background-color: var(--input-background-color);
 }
 
 .container main .board .card-wrapper .card-title h3{
-    background-color: #0A0A0A;
+    background-color: var(--input-background-color);
 }
 
 .container main .board .card-wrapper .card-task p{
-    background-color: #0A0A0A;
+    background-color: var(--input-background-color);
 }
 

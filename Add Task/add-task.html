@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>Adicionar Tarefa</title>
+        <link rel="stylesheet" href="add-task.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Adicionar Tarefa</h1>
+            <div id="task-form">
+                <input type="text" id="new-task"
+                    placeholder="Digite uma nova tarefa">
+                <textarea name="description-task" id="description-task"
+                    cols="100" rows="10" placeholder="Descrição"></textarea>
+                <select id="column-select">
+                    <option value="disabled">Selecione uma opção</option>
+                    <option value="backlog">Backlog</option>
+                    <option value="em-andamento">Em andamento</option>
+                    <option value="review">Review</option>
+                    <option value="pronto">Pronto</option>
+                </select>
+                <button onclick="addTask()" class="btn-add">Adicionar Tarefa</button>
+            </div>
+        </div>
+    </body>
+</html>

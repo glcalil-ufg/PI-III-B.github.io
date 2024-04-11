@@ -1,0 +1,50 @@
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --background-color: #45413E;
+    --text-color: #fff;
+    --border-color: #0A0A0A;
+    --input-background-color: #0A0A0A;
+    --button-background-color: #9127EF;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.task {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.task-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.task-body {
+    margin-bottom: 20px;
+}
+.task-footer {
+    text-align: right;
+}
+.task-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

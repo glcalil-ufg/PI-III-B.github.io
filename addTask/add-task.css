@@ -13,6 +13,8 @@
     box-sizing: border-box;
     font-family: var(--font-family);
     color: var(--text-color);
+    text-decoration: none;
+    
 }
 
 body{

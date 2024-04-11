@@ -1,64 +1,80 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    color: #fff;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 
-body{
-    background-color: #0A0A0A;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
+body {
+  background-color: #0a0a0a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-.container form{
-    background-color: #45413E;
-    padding: 10%;
-    height: 500px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex;
-    gap: 5%;
-    border-radius: 20px
-}
-
-.container form div{
-    display: flex;
-    flex-direction: column;
-}
-
-.container label{
-    padding-left: 2%;
-}
-
-.container input, select, option{
-    color: black;
-    padding-left: 2%;
-    margin-top: 2%;
-    border: none;
-    border-radius: 20px;
-    height: 2rem;  
-}
-/* To tentando deixar o link centralizado embaixo do button */
-.container div #submit{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container form {
+  background-color: #45413e;
+  padding: 10%;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  gap: 5%;
+  border-radius: 20px;
 }
 
 
-#submit{
-    border-radius: 20px;
-    background-color: #692FEB;
-    height: 2rem;
+.container form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ 
+}
+
+.container label {
+  padding: 4% 10% 1% 2%;
+}
+
+.container input,
+select,
+option {
+  color: black;
+  padding: 4% 10% 5% 2%;
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
 }
 
 
+#submit {
+  border-radius: 20px;
+  background-color: #692feb;
+  height: 2rem;
+  width: 16rem;
+}
 
+.container .submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 8rem;
+}
+
+.container .submit button#submit:hover{
+    background-color: #4E1993;
+}
+
+.container .submit a{
+    font-size: 80%;
+    text-decoration: none;
+}
+
+.container .submit a:hover{
+    color: #B790F8;
+}

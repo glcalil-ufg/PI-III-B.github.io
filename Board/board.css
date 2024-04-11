@@ -96,10 +96,13 @@ div.input-wrapper input:focus-visible{
     width: 7vw;
     padding: 0.5em;
     border-radius: 10px;
+    cursor: pointer;
 }
-.container header div.new-list i{
+
+.container header div.new-list i, a{
     background-color: #9127EF;
     padding: 0 0.5em ;
+    text-decoration: none;
 }
 
 

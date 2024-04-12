@@ -75,7 +75,7 @@ class Task {
 
             const task = taskList[idTask];
 
-            if(task !== null){
+            if(task !== null && task !== undefined){
                 return {
                     error: false,
                     message: 'Task encontrada com sucesso!',

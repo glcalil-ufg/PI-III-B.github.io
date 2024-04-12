@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Taskanban</title>
         <link rel="stylesheet" href="board.css">
+        <link rel="stylesheet" href="../Card/card.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -60,27 +61,35 @@
 
             <main>
                 <section class="board">
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" id="backlog">
                         <div class="card-title"><h3>Backlog</h3></div>
                         <div class="card-task"><p>tarefa</p></div>
                     </div>
 
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" id="em-andamento">
                         <div class="card-title"><h3>Em andamento</h3></div>
                         <div class="card-task"><p>tarefa</p></div>
                     </div>
 
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" id="review">
                         <div class="card-title"><h3>Review</h3></div>
                         <div class="card-task"><p>tarefa</p></div>
                     </div>
 
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" id="pronto">
                         <div class="card-title"><h3>Pronto</h3></div>
                         <div class="card-task"><p>tarefa</p></div>
                     </div>
                 </section>
             </main>
         </div>
+        
+        <script src="../src/task.js"></script>
+        <script src="./board.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Board.start();
+            });
+        </script>
     </body>
 </html>

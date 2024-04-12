@@ -33,5 +33,18 @@
                 </button>
             </div>
         </div>
+
+        <script src="../src//task.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Task.saveTask('Teste', 'Nova Task', 'hoje');
+                Task.saveTask('Teste 2', 'Nova Task 2', 'amanhã');
+                Task.getAll();
+                console.log(Task.getTaskById(1));
+                console.log(Task.deleteTaskById(1));
+                Task.getAll();
+                Task.clearAllTask()
+            });
+        </script>
     </body>
 </html>

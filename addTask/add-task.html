@@ -14,36 +14,29 @@
     <body>
         <div class="container">
             <h1>Adicionar Tarefa</h1>
-            <div id="task-form">
-                <input type="text" id="new-task"
-                    placeholder="Digite uma nova tarefa">
+            <form id="task-form">
+                <input type="text" name="new-task" id="new-task"
+                    placeholder="Digite uma nova tarefa" required>
                 <textarea name="description-task" id="description-task"
                     cols="100" rows="10" placeholder="Descrição"></textarea>
-                <select id="column-select">
-                    <option value="disabled">Selecione uma opção</option>
+                <select id="list-select" name="list-select" required>
+                    <option value>Selecione uma opção</option>
                     <option value="backlog">Backlog</option>
                     <option value="em-andamento">Em andamento</option>
                     <option value="review">Review</option>
                     <option value="pronto">Pronto</option>
                 </select>
-                <button onclick="addTask()" class="btn-add">
-                    <a href="../Board/board.html">
+                <button class="btn-add">
                         Adicionar Tarefa
-                    </a>
                 </button>
-            </div>
+            </form>
         </div>
 
-        <script src="../src//task.js"></script>
+        <script src="../src/task.js"></script>
+        <script src="./add-task.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                Task.saveTask('Teste', 'Nova Task', 'hoje');
-                Task.saveTask('Teste 2', 'Nova Task 2', 'amanhã');
-                Task.getAll();
-                console.log(Task.getTaskById(1));
-                console.log(Task.deleteTaskById(1));
-                Task.getAll();
-                Task.clearAllTask()
+                AddTask.start();
             });
         </script>
     </body>

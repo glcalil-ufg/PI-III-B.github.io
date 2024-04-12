@@ -1,8 +1,13 @@
 class Task {
 
+    static resetLocalStorage(){
+        localStorage.clear('backlog');
+        localStorage.clear('em-andamento');
+        localStorage.clear('review');
+        localStorage.clear('pronto');
+    }
 
-
-    static saveTask(title, body, date){
+    static saveTask(title, body, date, list){
         const newTask = {
             title: title,
             body: body,
@@ -11,7 +16,7 @@ class Task {
 
         let taskList = [];
 
-        const buffer = localStorage.getItem('task');
+        const buffer = localStorage.getItem(list);
 
         if(buffer !== null){
             taskList = JSON.parse(buffer);
@@ -19,21 +24,45 @@ class Task {
 
         taskList.push(newTask);
 
-        localStorage.setItem('task', JSON.stringify(taskList));
+        localStorage.setItem(list, JSON.stringify(taskList));
 
-        return true;
+        return {
+            error: false,
+            message: 'Task cadastrada com sucesso!',
+            data: null
+        }
     }
 
-    static getAll(){
-        let task = localStorage.getItem('task');
+    static getAll(list){
+        const buffer = localStorage.getItem(list);
 
-        console.log(JSON.parse(task));
+        if(buffer === null){
+            return {
+                error: true,
+                message: 'Nenhuma task cadastrada!',
+                data: null
+            }
+        } else {
+            const taskList = JSON.parse(buffer);
 
-        return true;
+            if(taskList !== null){
+                return {
+                    error: false,
+                    message: 'Tasks encontrada com sucesso!',
+                    data: taskList
+                }
+            } else{
+                return {
+                    error: true,
+                    message: 'Tasks não encontrada!',
+                    data: null
+                }
+            }
+        }
     }
 
-    static getTaskById(idTask){
-        const buffer = localStorage.getItem('task');
+    static getTaskById(idTask, list){
+        const buffer = localStorage.getItem(list);
 
         if(buffer === null){
             return {
@@ -62,8 +91,8 @@ class Task {
         }
     }
 
-    static deleteTaskById(idTask){
-        const buffer = localStorage.getItem('task');
+    static deleteTaskById(idTask, list){
+        const buffer = localStorage.getItem(list);
 
         if(buffer === null){
             return {
@@ -77,7 +106,7 @@ class Task {
             const task = taskList.splice(idTask, 1);
 
             if(task !== null){
-                localStorage.setItem('task', JSON.stringify(taskList));
+                localStorage.setItem(list, JSON.stringify(taskList));
                 return {
                     error: false,
                     message: 'Task removida com sucesso!',
@@ -93,8 +122,8 @@ class Task {
         }
     }
 
-    static clearAllTask(){
-        localStorage.clear();
+    static clearAllTask(list){
+        localStorage.clear(list);
 
         return true;
     }

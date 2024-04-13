@@ -1,42 +1,111 @@
-const User = {
-    //usuarios para login
-    users: [
-        {
-            email: "caroline.joyce@email.com",
-            name: 'Joyce',
-            psw: '1adbb3178591fd5bb0c248518f39bf6d' //asdf1234
-        },
-        {
-            email: "glcalil@email.com",
-            name: 'Gabriel',
-            psw: '828fd9255753432d51df95eb62d61722' //1234asdf
-        },
-        {
-            email: "r2d2@email.com",
-            name: 'Arthur',
-            psw: 'd8578edf8458ce06fbc5bb76a58c5ca4' //qwerty
-        },
-        {
-            email: "admin@email.com",
-            name: 'Fred',
-            psw: '21232f297a57a5a743894a0e4a801fc3' //admin
-        }
-    ],
+class User {
+    static resetLocalStorage(){
+        localStorage.clear('backlog');
+        localStorage.clear('em-andamento');
+        localStorage.clear('review');
+        localStorage.clear('pronto');
+        localStorage.clear('user');
+    }
 
-    //valida email e senha dos usuarios
-    auth: (email, psw) => {
-        for(let i = 0; i < User.users.length; i++){
-            let element = User.users[i];
-            if(element.email == email){
-                if(element.psw == psw) {
-                    return { auth: true, mensagem: 'Logado com sucesso!'};
-                } else {
-                    return { auth: false, mensagem: 'Senha ou usuário inválida!'};
+    static clearAllUsers(){
+        localStorage.clear('users');
+
+        return true;
+    }
+
+    static saveUser(user){
+
+        let userList = [];
+
+        const buffer = localStorage.getItem('users');
+
+        if(buffer !== null){
+            userList = JSON.parse(buffer);
+        }
+
+        userList.push(user);
+
+        localStorage.setItem('users', JSON.stringify(userList));
+
+        return {
+            error: false,
+            message: 'Usuário salvo com sucesso!',
+            data: null
+        }
+    }
+
+    static getAll(){
+        const buffer = localStorage.getItem('users');
+
+        if(buffer === null){
+            return {
+                error: true,
+                message: 'Nenhum usuário cadastrado!',
+                data: null
+            }
+        } else {
+            const userList = JSON.parse(buffer);
+
+            if(userList !== null){
+                return {
+                    error: false,
+                    message: 'Usuário(s) encontrado(s) com sucesso!',
+                    data: userList
+                }
+            } else{
+                return {
+                    error: true,
+                    message: 'Falha ao listar usuários!',
+                    data: null
                 }
             }
         }
-        return { auth: false, mensagem: 'Usuário não encontrado!'};
-    },
+    }
 
+
+    static getUserByEmail(userEmail){
+        const buffer = localStorage.getItem('users');
+
+        if(buffer === null){
+            return {
+                error: true,
+                message: 'Nenhum usuário cadastrado!',
+                data: null
+            }
+        } else {
+            const userList = JSON.parse(buffer);
+
+            for(const user of userList){
+                if(user.email == userEmail){
+                    return {
+                        error: false,
+                        message: 'Usuário encontrado com sucesso!',
+                        data: user
+                    }
+                }
+            }
+
+            return {
+                error: true,
+                message: 'Usuário não encontrado!',
+                data: null
+            }
+        }
+    }
+
+    //valida email e senha dos usuarios
+    static auth(email, psw){
+        const result = User.getUserByEmail(email);
+
+        if(result.error) return { auth: false, mensagem: result.message};
+
+        const user = result.data;
+
+        if(user.senha == psw) {
+            return { auth: true, mensagem: 'Logado com sucesso!'};
+        } else {
+            return { auth: false, mensagem: 'Senha ou usuário inválidos!'};
+        }
+    }
 
 }

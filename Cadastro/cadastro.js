@@ -20,6 +20,13 @@ const Cadastro = {
 
     makeSignUp: (formData) =>{
         // lógica para salvar ususario
+        User.saveUser({
+            name: formData.name,
+            email: formData.email,
+            birthDate: formData.birthDate,
+            senha: CryptoJS.MD5(formData.senha).toString(),
+            office: formData.office,
+        });
         // Redireciona para tela de login quando o usuario for cadastrado com sucesso.
         window.location.href ='./../Login/login.html';
     },

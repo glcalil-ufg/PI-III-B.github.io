@@ -48,6 +48,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10%;
+  cursor: pointer;
 }
 
 .container header div.search {
@@ -62,7 +63,7 @@
   background-color: var(--input-background-color);
   height: 3vh;
   width: 20vw;
-  color: red;
+  color: #fff;
 }
 
 .container header div.search div.input-wrapper {
@@ -175,10 +176,10 @@ a {
 }
 
 .task-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .task-title,

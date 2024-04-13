@@ -27,6 +27,11 @@ body {
   border-radius: 20px;
 }
 
+.container form h1 {
+  margin-bottom: 5%;
+  padding-left: 35%;
+}
+
 
 .container form div {
   display: flex;
@@ -66,12 +71,22 @@ option {
   height: 8rem;
 }
 
+#submit {
+  border-radius: 20px;
+  background-color: #692feb;
+  height: 2.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
 .container .submit button#submit:hover{
     background-color: #4E1993;
+    height: 2.5rem;
+  width: 100%;
 }
 
 .container .submit a{
-    font-size: 80%;
+    font-size: 100%;
     text-decoration: none;
 }
 

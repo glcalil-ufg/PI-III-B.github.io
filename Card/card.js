@@ -20,9 +20,6 @@ const Card = {
             const elementPart = document.getElementsByClassName(Card.class[part])[0]
             elementPart.innerHTML = data[part];
         }
-        const btnExcluir = document.getElementById(Card.id.btnExcluir);
-        btnExcluir.setAttribute('data-task', Card.global.taskId);
-        btnExcluir.setAttribute('data-list', Card.global.taskList);
     },
 
     getCardData: () => {
@@ -54,10 +51,8 @@ const Card = {
         }
     },
 
-    deleteTask: (element) => {
-        const taskId = element.dataset.task;
-        const tasklist = element.dataset.list;
-        Task.deleteTaskById(taskId, tasklist);
+    deleteTask: () => {
+        Task.deleteTaskById(Card.global.taskId, Card.global.taskList);
         window.location = '../Board/board.html';
     },
 

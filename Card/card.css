@@ -56,6 +56,10 @@ body{
 
 }
 
+.task-body::first-letter, .task-title::first-letter{
+    text-transform: uppercase;
+}
+
 .task-footer {
     display: flex;
     justify-content: space-around;

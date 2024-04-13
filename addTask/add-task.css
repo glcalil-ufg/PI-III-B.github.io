@@ -54,6 +54,10 @@ body{
     width: 100%;
 }
 
+.container #task-form textarea::first-letter{
+    text-transform: uppercase;
+}
+
 .container #task-form .btn-add{
     background-color: #9127EF;
     height: 2.5rem;

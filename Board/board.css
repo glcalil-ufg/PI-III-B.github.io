@@ -168,14 +168,16 @@ a {
 //Estilo dos cards
 
 .task {
-  background-color: #f0f0f0;
+  margin: 10%;
   border-radius: 8px;
   padding: 20px;
-  margin: 10px 0;
+  margin: 10% 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin: 2%; */
 }
 
 .task-header {
+  background-color: #B790F8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,7 +186,11 @@ a {
 
 .task-title,
 .task-date {
+  background-color: #B790F8;
   font-size: 16px;
-  font-weight: bold;
   padding: 2%;
+}
+
+.task-title::first-letter{
+  text-transform: uppercase;
 }

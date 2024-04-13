@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Taskanban</title>
         <link rel="stylesheet" href="board.css">
-        <link rel="stylesheet" href="../Card/card.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -48,13 +47,13 @@
                         <i class="fa-solid fa-list"></i>
                     </div>
                     <div class="add-list">
-                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-plus" title="Adicionar Tarefa"></i>
                     </div>
                 </div>
 
                 <div class="bottom">
                     <div class="user">
-                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-regular fa-user" title="Sair" onclick="window.location='../Login/login.html'"></i>
                     </div>
                 </div>
             </aside>
@@ -63,22 +62,18 @@
                 <section class="board">
                     <div class="card-wrapper" id="backlog">
                         <div class="card-title"><h3>Backlog</h3></div>
-                        <div class="card-task"><p>tarefa</p></div>
                     </div>
 
                     <div class="card-wrapper" id="em-andamento">
                         <div class="card-title"><h3>Em andamento</h3></div>
-                        <div class="card-task"><p>tarefa</p></div>
                     </div>
 
                     <div class="card-wrapper" id="review">
                         <div class="card-title"><h3>Review</h3></div>
-                        <div class="card-task"><p>tarefa</p></div>
                     </div>
 
                     <div class="card-wrapper" id="pronto">
                         <div class="card-title"><h3>Pronto</h3></div>
-                        <div class="card-task"><p>tarefa</p></div>
                     </div>
                 </section>
             </main>

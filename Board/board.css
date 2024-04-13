@@ -1,173 +1,189 @@
 :root {
-    --font-family: "Roboto", sans-serif;
-    --background-color: #45413E;
-    --text-color: #fff;
-    --border-color: #0A0A0A;
-    --input-background-color: #0A0A0A;
-    --button-background-color: #9127EF;
+  --font-family: "Roboto", sans-serif;
+  --background-color: #45413e;
+  --text-color: #fff;
+  --border-color: #0a0a0a;
+  --input-background-color: #0a0a0a;
+  --button-background-color: #9127ef;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--background-color);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
-.container{
-    display: grid;
-    grid-template-areas:
+.container {
+  display: grid;
+  grid-template-areas:
     "header header header"
     "aside main main";
-    grid-gap: 1rem;
-    grid-template-columns: 5vw auto auto;
-    grid-template-rows: auto auto;
+  grid-gap: 1rem;
+  grid-template-columns: 5vw auto auto;
+  grid-template-rows: auto auto;
 }
 
-.container header{
-    width: 100%; 
-    grid-area: header;
-    border-bottom: 1px solid var(--input-background-color);
-    padding: 10px;
-    height: 5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container header {
+  width: 100%;
+  grid-area: header;
+  border-bottom: 1px solid var(--input-background-color);
+  padding: 10px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container header div{
-    height: 3vh;
-    display: flex;
-    gap: 2%;
+.container header div {
+  height: 3vh;
+  display: flex;
+  gap: 2%;
 }
 
-.container header div.logo{
-    dispaly: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10%;
+.container header div.logo {
+  dispaly: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10%;
 }
 
-.container header div.search{
-    dispaly: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5%;
+.container header div.search {
+  dispaly: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
 }
 
-.container header div.search input{
-    border: none;
-    background-color: var(--input-background-color);
-    height: 3vh;
-    width: 20vw;
-    color: red;
+.container header div.search input {
+  border: none;
+  background-color: var(--input-background-color);
+  height: 3vh;
+  width: 20vw;
+  color: red;
 }
 
-.container header div.search div.input-wrapper{
-    display: flex;
-    align-items: center;
-    background-color: var(--input-background-color);
-    padding: 10px;
-    border-radius: 10px;
+.container header div.search div.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--input-background-color);
+  padding: 10px;
+  border-radius: 10px;
 }
 
-
-.container header div.search div.input-wrapper i{
-    background-color: var(--input-background-color);
-    cursor: pointer;
-
+.container header div.search div.input-wrapper i {
+  background-color: var(--input-background-color);
+  cursor: pointer;
 }
-div.input-wrapper input:focus-visible{
-    outline: none;
+div.input-wrapper input:focus-visible {
+  outline: none;
 }
 
-.container header div.new-list{
-    display: flex;
-    align-items: center;
-    font-size: 2em;
-
+.container header div.new-list {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
 }
 
-.container header div.new-list button{
-    border: none;
-    background-color: var(--button-background-color);
-    width: 7vw;
-    padding: 0.5em;
-    border-radius: 10px;
-    cursor: pointer;
+.container header div.new-list button {
+  border: none;
+  background-color: var(--button-background-color);
+  width: 7vw;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.container header div.new-list i, a{
-    background-color: #9127EF;
-    padding: 0 0.5em ;
-    text-decoration: none;
+.container header div.new-list i,
+a {
+  background-color: #9127ef;
+  padding: 0 0.5em;
+  text-decoration: none;
 }
 
-
-.container aside{
-    border-right: 1px solid var(--input-background-color);
-    grid-area: aside;
-    margin-right: 2%;
-    width: 5vh;
-    height: 93vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container aside {
+  border-right: 1px solid var(--input-background-color);
+  grid-area: aside;
+  margin-right: 2%;
+  width: 5vh;
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.container aside div.top{
-    height: 10%;
-    padding: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.container aside div.top {
+  height: 10%;
+  padding: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.container aside div.bottom{
-    height: 10%;
-    padding: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+.container aside div.bottom {
+  height: 10%;
+  padding: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.container aside i{
-    cursor: pointer;
+.container aside i {
+  cursor: pointer;
 }
-
-
 
 .container main {
-    grid-area: main;
-    border: 1px solid white;
-    width: 90vw;
-    height: 90vh;
-    padding: 2%
-    
+  grid-area: main;
+  width: 90vw;
+  height: 90vh;
+  padding: 2%;
 }
-.container main .board{
+.container main .board {
+  display: flex;
+  gap: 2%;
+}
+.container main .card-wrapper {
+  dispaly: flex;
+  flex-direction: column;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: var(--input-background-color);
+}
+
+.container main .board .card-wrapper .card-title h3 {
+  background-color: var(--input-background-color);
+}
+
+.container main .board .card-wrapper .card-task p {
+  background-color: var(--input-background-color);
+}
+
+//Estilo dos cards
+
+.task {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
     display: flex;
-    gap: 2%;
-}
-.container main .card-wrapper{
-    dispaly: flex;
-    flex-direction: column;
-    width: 20%;
-    height: auto;
-    border-radius: 10px;
-    padding: 1%;
-    background-color: var(--input-background-color);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px
 }
 
-.container main .board .card-wrapper .card-title h3{
-    background-color: var(--input-background-color);
+.task-title,
+.task-date {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2%;
 }
-
-.container main .board .card-wrapper .card-task p{
-    background-color: var(--input-background-color);
-}
-

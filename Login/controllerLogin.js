@@ -18,6 +18,7 @@ const Login = {
         //aviso de login com sucesso ou invalido
         if(user.auth){
             alert('login com sucesso');
+            window.location = '../Board/board.html';
         } else {
             alert(user.mensagem);
         }

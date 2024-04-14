@@ -47,13 +47,13 @@ const Card = {
             Card.renderCard(task.data);
         } else {
             alert('Falha ao buscar card');
-            window.location = '../Board/board.html';
+            window.location = '../board/board.html';
         }
     },
 
     deleteTask: () => {
         Task.deleteTaskById(Card.global.taskId, Card.global.taskList);
-        window.location = '../Board/board.html';
+        window.location = '../board/board.html';
     },
 
     start: () => {

@@ -28,7 +28,7 @@ const Cadastro = {
             office: formData.office,
         });
         // Redireciona para tela de login quando o usuario for cadastrado com sucesso.
-        window.location.href ='./../Login/login.html';
+        window.location.href ='./../login/login.html';
     },
 
     listener: () => {

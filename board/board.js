@@ -55,7 +55,7 @@ const Board = {
     viewCard: (element) => {
         const cardId = element.id;
         const cardList = element.dataset.list;
-        window.location = `../Card/card.html?list=${cardList}&task=${cardId}`
+        window.location = `../card/card.html?list=${cardList}&task=${cardId}`
     },
 
     start: () => {

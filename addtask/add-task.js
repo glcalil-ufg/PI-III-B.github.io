@@ -52,7 +52,7 @@ const AddTask = {
 
                 if (result === true) {
                    // caso não queira cadastrar nova task retorna para a página de bords
-                   window.location = './../Board/board.html';
+                   window.location = './../board/board.html';
                 } else {
                     AddTask.clearForm();
                 }
